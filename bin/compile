@@ -61,4 +61,11 @@ fi
 mv heroku-client/* .
 rmdir heroku-client
 
+echo "-----> Installing additional plugins for Heroku Toolbelt"
+
+bin/heroku plugins:install heroku-fork
+
+cd "$BUILD_DIR"
+mv "$HOME"/.heroku .
+
 echo "-----> heroku toolbelt installation done"
